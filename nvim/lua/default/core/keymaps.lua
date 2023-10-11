@@ -55,5 +55,22 @@ keymap.set("n", "<leader>gfc", "<cmd>Telescope git_bcommits<cr>") -- list git co
 keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>") -- list git branches (use <cr> to checkout) ["gb" for git branch]
 keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current changes per file with diff preview ["gs" for git status]
 
+-- tab buffer
+local opts = { noremap = true, silent = true }
+keymap.set("n", "<C-,>", ":BufferPrevious<CR>", opts)
+keymap.set("n", "<C-.>", ":BufferNext<CR>", opts)
+keymap.set("n", "<C-<>", ":BufferMovePrevious<CR>", opts)
+keymap.set("n", "<C->>", ":BufferMoveNext<CR>", opts)
+keymap.set("n", "<C-1>", ":BufferGoto 1<CR>", opts)
+keymap.set("n", "<C-2>", ":BufferGoto 2<CR>", opts)
+keymap.set("n", "<C-3>", ":BufferGoto 3<CR>", opts)
+keymap.set("n", "<C-4>", ":BufferGoto 4<CR>", opts)
+keymap.set("n", "<C-5>", ":BufferGoto 5<CR>", opts)
+keymap.set("n", "<C-6>", ":BufferGoto 6<CR>", opts)
+keymap.set("n", "<C-7>", ":BufferGoto 7<CR>", opts)
+keymap.set("n", "<C-8>", ":BufferGoto 8<CR>", opts)
+keymap.set("n", "<C-9>", ":BufferGoto 9<CR>", opts)
+keymap.set("n", "<C-0>", ":BufferLast<CR>", opts)
+keymap.set("n", "<C-x>", ":BufferClose<CR>", opts)
 -- restart lsp server
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
