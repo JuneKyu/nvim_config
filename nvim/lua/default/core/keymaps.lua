@@ -60,18 +60,8 @@ keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if ne
 
 -- tab buffer
 local opts = { noremap = true, silent = true }
-keymap.set("n", "<C-,>", ":BufferPrevious<CR>", opts)
-keymap.set("n", "<C-.>", ":BufferNext<CR>", opts)
-keymap.set("n", "<C-<>", ":BufferMovePrevious<CR>", opts)
-keymap.set("n", "<C->>", ":BufferMoveNext<CR>", opts)
-keymap.set("n", "<C-1>", ":BufferGoto 1<CR>", opts)
-keymap.set("n", "<C-2>", ":BufferGoto 2<CR>", opts)
-keymap.set("n", "<C-3>", ":BufferGoto 3<CR>", opts)
-keymap.set("n", "<C-4>", ":BufferGoto 4<CR>", opts)
-keymap.set("n", "<C-5>", ":BufferGoto 5<CR>", opts)
-keymap.set("n", "<C-6>", ":BufferGoto 6<CR>", opts)
-keymap.set("n", "<C-7>", ":BufferGoto 7<CR>", opts)
-keymap.set("n", "<C-8>", ":BufferGoto 8<CR>", opts)
-keymap.set("n", "<C-9>", ":BufferGoto 9<CR>", opts)
-keymap.set("n", "<C-0>", ":BufferLast<CR>", opts)
+keymap.set("n", "<leader>,", "<cmd>BufferPrevious<CR>", opts)
+keymap.set("n", "<leader>.", "<cmd>BufferNext<CR>", opts)
+keymap.set("n", "<leader><", ":BufferMovePrevious<CR>", opts)
+keymap.set("n", "<leader>>", ":BufferMoveNext<CR>", opts)
 keymap.set("n", "<C-x>", ":BufferClose<CR>", opts)
