@@ -60,8 +60,8 @@ keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if ne
 
 -- tab buffer
 local opts = { noremap = true, silent = true }
-keymap.set("n", "<leader>,", "<cmd>BufferPrevious<CR>", opts)
-keymap.set("n", "<leader>.", "<cmd>BufferNext<CR>", opts)
-keymap.set("n", "<leader><", ":BufferMovePrevious<CR>", opts)
-keymap.set("n", "<leader>>", ":BufferMoveNext<CR>", opts)
-keymap.set("n", "<C-x>", ":BufferClose<CR>", opts)
+keymap.set("n", "<leader>,", "<cmd>BufferPrevious<cr>", opts)
+keymap.set("n", "<leader>.", "<cmd>BufferNext<cr>", opts)
+keymap.set("n", "<leader><", "<cmd>BufferMovePrevious<cr>", opts)
+keymap.set("n", "<leader>>", "<cmd>BufferMoveNext<cr>", opts)
+keymap.set("n", "<C-x>", "<cmd>BufferClose<cr>", opts)
