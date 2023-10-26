@@ -13,7 +13,7 @@ local packer_bootstrap = ensure_packer() -- true if packer was just installed
 
 -- autocommand that reloads neovim and installs/updates/removes plugins
 -- when file is saved
-vim.cmd([[
+vim.cmd([[ 
   augroup packer_user_config
     autocmd!
     autocmd BufWritePost plugins-setup.lua source <afile> | PackerSync
@@ -34,6 +34,8 @@ return packer.startup(function(use)
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
 	-- use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
+	-- use("jacoborus/tender.vim")
+	-- use("savq/melange-nvim")
 	-- use("ellisonleao/gruvbox.nvim")
 	use("catppuccin/nvim")
 
@@ -108,7 +110,7 @@ return packer.startup(function(use)
 
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
-	
+
 	-- tab buffer
 	use("romgrk/barbar.nvim")
 
