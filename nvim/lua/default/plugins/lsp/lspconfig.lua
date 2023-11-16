@@ -86,8 +86,16 @@ lspconfig["tailwindcss"].setup({
 lspconfig["pyright"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
-	filetypes = { "python" },
+	-- filetypes = { "python" },
 })
+
+-- configure pylsp language server
+lspconfig["pylsp"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+	-- filetypes = { "python" },
+})
+
 
 -- configure emmet language server
 lspconfig["emmet_ls"].setup({
